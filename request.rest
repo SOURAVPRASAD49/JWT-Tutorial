@@ -1,0 +1,40 @@
+GET http://localhost:3000/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic291cmF2IiwiaWF0IjoxNjIwNjQ1NDAwLCJleHAiOjE2MjA2NDU0NjB9.wBtcbq2pop0RXZ9f2HvyoP8DyRCsQ4A6RDYhK0JsDA0
+
+###
+POST http://localhost:4000/token
+Content-Type: application/json
+
+{
+    "token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic291cmF2IiwiaWF0IjoxNjIwNjQ1MzI1fQ.xt1hv9ztQoHKQspUSmpVfgFfRKgnNaE-uVKadOlJzrw"
+}
+
+###
+GET http://localhost:4000/users
+
+###
+DELETE http://localhost:4000/logout
+Content-Type: application/json
+
+{
+    "token" :
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic291cmF2IiwiaWF0IjoxNjIwNjQ1MzI1fQ.xt1hv9ztQoHKQspUSmpVfgFfRKgnNaE-uVKadOlJzrw"
+}
+###
+
+POST http://localhost:4000/signup
+Content-Type: application/json
+
+{
+    "name" : "sourav",
+    "password": "1234"
+}
+
+###
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+    "name" : "sourav",
+    "password": "1234"
+}
